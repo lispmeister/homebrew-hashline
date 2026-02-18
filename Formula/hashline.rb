@@ -1,28 +1,28 @@
 class Hashline < Formula
   desc "Content-addressable line editing tool for AI coding assistants"
   homepage "https://github.com/lispmeister/hashline"
-  version "0.1.2"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-apple-darwin.tar.gz"
-      sha256 "1c2e965599f394184466d2e8df19525bc4dee3d5614f3d9eb7f7036fec183825"
+      sha256 "e7b08db51f1d6c53de8c6d27559a783a309399664a115258c40a43912cac970e"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-apple-darwin.tar.gz"
-      sha256 "4a60011e15daf6783905d4278bce9f41a9bcfb2d46b69cbf907feceb9b8a446b"
+      sha256 "ab9af48533b28da1131a1393a11fe525a079e2a11058be7a4a81f5389c51bc73"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e647adc48446450b2529c045ed0b0bc8188c354b8538fc3ef62617f75b53ecbf"
+      sha256 "9b98d6728fbc796f839be3af2a4c2a6d7a5d717761a368ecfd84d2b8931b02bb"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "105a9ad743f15212133fde4c810729f60533a98b701b3766aef50f639a1ad2c7"
+      sha256 "2cc229b443af853a315931a988db5510c2a0c8dd4a6a005152d5d96b8787ee5e"
     end
   end
 
@@ -32,7 +32,8 @@ class Hashline < Formula
   end
 
   test do
-    (testpath/"test.txt").write("hello world\n")
+    (testpath/"test.txt").write("hello world
+")
     output = shell_output("#{bin}/hashline read #{testpath}/test.txt")
     assert_match "1:", output
     assert_match "hello world", output
