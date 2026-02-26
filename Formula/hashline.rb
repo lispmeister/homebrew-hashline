@@ -1,28 +1,28 @@
 class Hashline < Formula
   desc "Content-addressable line editing tool for AI coding assistants"
   homepage "https://github.com/lispmeister/hashline"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-apple-darwin.tar.gz"
-      sha256 "7c49782f61df6efcbb0b224850c82c57f90d171baa05a49bd8631bf3927cde04"
+      sha256 "b4605df5ce3ec62c5e10f5a5cda928fb396c2c505add219ed34fe3434167e122"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-apple-darwin.tar.gz"
-      sha256 "70b5c2baae436ccf9cb9caf32ef9e062b06a7ae5b6024ed9bcc204620c4649bb"
+      sha256 "e368cb91114db1980d8f2611f2ddd2130a5d2b3df11a29b4cb61888dbe3971cf"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "91fca89906780bcc63e3ccca38b6ea2ce3c3524d5ea2e7c8cbff604f2731cc96"
+      sha256 "17cf1a1129224b3785243d0da1cad435429406d7dfa6aaa7afee2cf98875ffa1"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9cfbed30471d3f5e7ad1e2f1d509affc0c713a079477b1cd116399eab2bc035f"
+      sha256 "bb8593bbb1f87e62751b4dcd0652c7f0abca71179739565c3611415c087e7cb3"
     end
   end
 
