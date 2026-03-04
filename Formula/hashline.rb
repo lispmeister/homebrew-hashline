@@ -7,22 +7,22 @@ class Hashline < Formula
   on_macos do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-apple-darwin.tar.gz"
-      sha256 "c481e999ba7ce01ef2c3a89bd511d35a9092da2d31fb7790adcc91c4a0b71992"
+      sha256 "00ebdaba6b4cc522b53e017e316ad7e13c58ba735241a9b8f380b6ca2d46b5b3"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-apple-darwin.tar.gz"
-      sha256 "6e0e886be91a700d0e03a501e05f66d204a6abc3cd163bbdfbfb57799232deca"
+      sha256 "a0ad9dce23ff97035dd355ff08472e513b3f2c2a907838cfe392a7f5cb6681e1"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1b326523e1d322f350275ba7115701fa84ab996417e270273843d4cdb5cf7615"
+      sha256 "278fa23aae73e9ab4835c704fc537dfd94c02d73591ebbc6697b9faa6cfea8c9"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8ce3fea4d210a16c04ba07ac6d3c15f2e71fed71229e26731ab045d275936c02"
+      sha256 "6fb7829167123af26337109149e39a373651c974cf490d50bf70e1488433b974"
     end
   end
 
@@ -37,7 +37,7 @@ class Hashline < Formula
 
         mkdir -p ~/.claude/skills/hashline-setup
         curl -fsSL https://raw.githubusercontent.com/lispmeister/hashline/main/contrib/skills/hashline-setup/SKILL.md \\
-            -o ~/.claude/skills/hashline-setup/SKILL.md
+  -o ~/.claude/skills/hashline-setup/SKILL.md
 
       Then run /hashline-setup in any project to activate the hooks.
 
