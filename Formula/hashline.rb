@@ -31,6 +31,21 @@ class Hashline < Formula
     man1.install Dir["man/*.1"]
   end
 
+  def caveats
+    <<~EOS
+      To use hashline with Claude Code, install the skill (one-time):
+
+        mkdir -p ~/.claude/skills/hashline-setup
+        curl -fsSL https://raw.githubusercontent.com/lispmeister/hashline/main/contrib/skills/hashline-setup/SKILL.md \\
+            -o ~/.claude/skills/hashline-setup/SKILL.md
+
+      Then run /hashline-setup in any project to activate the hooks.
+
+      For other agents (Cursor, Windsurf, etc.), see:
+        https://github.com/lispmeister/hashline#agent-integration
+    EOS
+  end
+
   test do
     (testpath/"test.txt").write("hello world\n")
     output = shell_output("#{bin}/hashline read #{testpath}/test.txt")
