@@ -7,22 +7,22 @@ class Hashline < Formula
   on_macos do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-apple-darwin.tar.gz"
-      sha256 "c1a0bb7222fb65ddd7e4d346c903a317092ad2e01702284e74536573a26dd4bc"
+      sha256 "dca2b494e635addd763c383903f7910fb68f24407abb979d09497d7715fc6977"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-apple-darwin.tar.gz"
-      sha256 "cc745b1d740f6a70d3db5fe3f086005a17bbe7b81fca72d15c9215f839431ffb"
+      sha256 "d94b7425a1b0b710f822199559b405004ad232d73541bea5d62cb7d3ed8b2f5a"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "13c703d9bd6d4d6dc6686e96915525a9328ed581c4503bf06e7a7bb9e5ed9247"
+      sha256 "14d223311dc55b68b50057da58e674dd063e10608e3f5aceecf47622a6998d82"
     end
     on_intel do
       url "https://github.com/lispmeister/hashline/releases/download/v#{version}/hashline-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b70211fccde322c9a251bbae9cab020a80374617ab3f88b6819e1801c1feb980"
+      sha256 "620b4a66af4512914f9d3dff5f64431685f02738e14f87f5024d08882c1d373e"
     end
   end
 
